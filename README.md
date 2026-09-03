@@ -132,17 +132,3 @@ empty folder, duplicate persona key — rather than a raw traceback.
 ```
 pip install requests pyyaml
 ```
-
-## Notes / next steps (from the original sketch)
-
-- **Repetition detection** is a simple `difflib` similarity check between
-  an agent's last two turns — crude but effective at catching stalls.
-- **Adding a search tool**: give an agent a real "look this up" tool call
-  (e.g. wrap a search API) so debates can cite real facts — turns this
-  from a toy into a genuine agent-orchestration testbed.
-- **>2 agents**: the orchestrator currently assumes exactly two debating
-  personas; extending to round-robin with 3+ is a natural next step —
-  mainly a matter of generalizing `run_debate`'s inner loop over a list
-  instead of a fixed pair.
-- **Persona customization**: see "Editing personas" above — it's a plain
-  YAML file, no framework to learn.
